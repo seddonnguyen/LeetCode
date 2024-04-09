@@ -28,6 +28,11 @@ public class AddTwoNumbers {
     }
 
     public static void main(String[] args) {
-
+        int[] arr = {2, 4, 3};
+        ListNode linkList = buildLinkList(arr);
+        int[] convertedArr = convertLinkListToArray(linkList);
+        for (int i : convertedArr) {
+            System.out.print(i + " ");
+        }
     }
 }
