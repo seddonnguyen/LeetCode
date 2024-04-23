@@ -1,7 +1,7 @@
 package BinarySearch;
 
 public class BinarySearch {
-    
+
     //        Input: nums = [-1,0,3,5,9,12], target = 9
     //        Output: 4
 
@@ -9,21 +9,20 @@ public class BinarySearch {
     //        Output: -1
 
     static int binarySearch(int[] nums, int target) {
-        if (nums.length == 0) {
-            return -1;
-        }
+        if (nums.length == 0) { return -1; }
 
         int left = 0;
         int right = nums.length - 1;
 
         while (left < right) {
             int middle = (right + left) / 2;
+            int current = nums[middle];
 
-            if (nums[middle] > target) {
+            if (current > target) {
                 right = middle - 1;
-            } else if (nums[middle] < target) {
+            } else if (current < target) {
                 left = middle + 1;
-            } else if (nums[middle] == target) {
+            } else {
                 return middle;
             }
         }
